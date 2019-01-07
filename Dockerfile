@@ -12,13 +12,13 @@ RUN apk add --no-cache cmark@testing pandoc pandoc-citeproc
 
 RUN fc-cache
 
-RUN Rscript -e "install.packages(c('knitr', 
-                                   'rmarkdown', 
-                                   'ggplot2', 
-                                   'cowplot', 
-                                   'extrafont'), 
-                                 repos = 'https://cloud.r-project.org/');
-                library(extrafont);
-                font_import();
+RUN Rscript -e "install.packages(c('knitr', \
+                                   'rmarkdown', \
+                                   'ggplot2', \
+                                   'cowplot', \
+                                   'extrafont'), \
+                                 repos = 'https://cloud.r-project.org/'); \
+                library(extrafont); \
+                font_import(); \
                 loadfonts()"
                                  
